@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(lordwimsey)" // Who made the changes. //- Peter: war none, default config
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -544,14 +544,14 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 } //- Peter: war einkommentiert (default)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 1600, 438, 0, 0, 0} //- Peter: Titan Clone Bowden Extruder Steps
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 1600, 438} //- Peter: Titan Clone Bowden Extruder Steps
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 } //- Peter: dies war default
-#define DEFAULT_MAX_FEEDRATE          {300, 300, 10, 75, 100, 100, 100}  //- Peter
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 10, 75}  //- Peter
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -764,7 +764,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false //- Peter: war true
 #define INVERT_Z_DIR false
 
 // Enable this option for Toshiba stepper drivers
@@ -1335,7 +1335,7 @@
  *            https://github.com/olikraus/U8glib_Arduino
  */
 //#define ULTRA_LCD   // Character based
-//#define DOGLCD      // Full graphics display
+#define DOGLCD      // Full graphics display //- Peter: war auskommentiert
 
 /**
  * SD CARD

@@ -137,6 +137,14 @@
 
 #define I2C_EEPROM
 
+//- Peter: das hier ist neu:
+//- von hier
+//###ButtonEncoder
+    #define BTN_EN1         50
+    #define BTN_EN2         52
+    #define BTN_ENC         48
+//- bis hier
+
 //
 // LCD / Controller
 //
